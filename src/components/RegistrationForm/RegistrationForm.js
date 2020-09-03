@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Button, Input, Required} from '../Utils/Utils'
 
 export default class RegistrationForm extends Component{
     static defaultProps = {
@@ -28,7 +29,7 @@ export default class RegistrationForm extends Component{
                     {error && <p className='red'>{error}</p>}
                 </div>
                 <div className='full_name'>
-                    <label htmlFor='RegistrationForm__full_name'>Full Name<Require /></label>
+                    <label htmlFor='RegistrationForm__full_name'>Full Name<Required /></label>
                     <Input name='full_name' type='text' Required id='RegistrationForm__full_name'></Input>
                 </div>
                 <div className='user_name'>

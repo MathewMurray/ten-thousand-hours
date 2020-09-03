@@ -1,8 +1,8 @@
 import React from 'react'
-import {format as formateDate} from 'date-fns'
+import {format as formatDate} from 'date-fns'
 
-export function niceDate({date,formate='Do MMMM YYYY'}) {
-    return formateDate(date,format)
+export function niceDate({date,format='Do MMMM YYYY'}) {
+    return formatDate(date,format)
 }
 
 export function Hyph(){
@@ -37,7 +37,7 @@ export function Section({className,list,...props}){
     const classes = [
         list && 'section--list',
         className,
-    ].filter(boolean).join(' ')
+    ].filter(Boolean).join(' ')
     return(
         <section className={classes}{...props}/>
     )

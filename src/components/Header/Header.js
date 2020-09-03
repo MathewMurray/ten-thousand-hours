@@ -33,7 +33,7 @@ export default class Header extends Component {
             <span className='Header__tagline--wide'>lets learn together!</span>
             {TokenService.hasAuthToken()
                 ? this.renderLogoutLink()
-                :this.renderLoginLink}
+                :this.renderLoginLink()}
         </nav>
 
         <span className='Header__tagline--narrow'>Lets learn together!</span>
