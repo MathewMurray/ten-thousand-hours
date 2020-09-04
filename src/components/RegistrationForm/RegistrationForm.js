@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Button, Input, Required} from '../Utils/Utils'
-
+import AuthApiService from '../../services/auth-api-service'
 export default class RegistrationForm extends Component{
     static defaultProps = {
         onRegistrationSuccess: () => {}
@@ -12,13 +12,21 @@ export default class RegistrationForm extends Component{
         ev.preventDefault()
         const {full_name,user_name,password} = ev.target
 
-        console.log('registration form submitted')
-        console.log(full_name,user_name,password)
-
+        this.setState({error:null})
+        AuthApiService.postUser({
+            user_name:user_name.value,
+            password:password.value,
+            full_name: full_name.value
+        })
+        .then(user => { 
         full_name.value = ''
         user_name.value = ''
         password.value = ''
         this.props.onRegistrationSuccess()
+    })
+    .catch(res => {
+        this.setState({error:res.error})
+    })
     }
 
     render(){

@@ -11,7 +11,7 @@ export default class LogForm extends Component {
         const{goal} = this.context
         const {text,user_hours} = ev.target
 
-        GoalApiService.postLog(goal.id,test.value,Number(user_hours.value))
+        GoalApiService.postLog(goal.id,text.value,Number(user_hours.value))
             .then(this.context.addLog)
             .then(() => {
                 text.value = ''
