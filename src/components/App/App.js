@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Header from '../Header/Header'
-import PrivateRoute from '../Utils/PrivateRoute'
+//import PrivateRoute from '../Utils/PrivateRoute'
 import PublicRoute from '../Utils/PublicRoute'
 import LoginPage from '../../routes/loginPage/LoginPage'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
@@ -38,8 +38,8 @@ class App extends Component {
               path={'/register'}
               component={RegistrationPage}
             />
-            <PrivateRoute
-              path={'/goals/:userId'}
+            <PublicRoute
+              path={'/userPage'}
               component={UserPage}
             />
             <Route

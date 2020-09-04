@@ -1,0 +1,1 @@
+//pulls all user goals and logs from db
