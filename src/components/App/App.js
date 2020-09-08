@@ -1,13 +1,14 @@
 import React, {Component} from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Header from '../Header/Header'
-//import PrivateRoute from '../Utils/PrivateRoute'
+import PrivateRoute from '../Utils/PrivateRoute'
 import PublicRoute from '../Utils/PublicRoute'
 import LoginPage from '../../routes/loginPage/LoginPage'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 import HomePage from '../HomePage/HomePage'
 import UserPage from '../UserPage/UserPage'
+
 class App extends Component {
   state = { hasError: false }
 
@@ -25,10 +26,9 @@ class App extends Component {
         <main className='App_main'>
           {this.state.hasError && <p className='red'>There was an error! oh no!</p>}
           <Switch>
-            <Route
-              exact
-              path={'/'}
-              component={HomePage}
+            <PrivateRoute
+              path={'/userPage'}
+              component={UserPage}
             />
             <PublicRoute
               path={'/login'}
@@ -38,9 +38,10 @@ class App extends Component {
               path={'/register'}
               component={RegistrationPage}
             />
-            <PublicRoute
-              path={'/userPage'}
-              component={UserPage}
+            <Route
+              exact
+              path={'/'}
+              component={HomePage}
             />
             <Route
               component={NotFoundPage}

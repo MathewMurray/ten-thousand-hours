@@ -3,11 +3,11 @@ import RegistrationForm from '../../components/RegistrationForm/RegistrationForm
 import {Section} from '../../components/Utils/Utils'
 
 export default class RegistrationPage extends Component {
-    static defaultProps = {
-        history: {
-            push: () => {},
-        },
-    }
+    // static defaultProps = {
+    //     history: {
+    //         push: () => {},
+    //     },
+    // }
 
     handleRegistrationSuccess = user => {
         const {history} = this.props
@@ -18,7 +18,7 @@ export default class RegistrationPage extends Component {
         return (
             <Section className='RegistrationPage'>
                 <h2>Register</h2>
-                <RegistrationForm onRegistrationSucess={this.handleRegistrationSuccess}/>
+                <RegistrationForm onRegistrationSuccess={this.handleRegistrationSuccess}/>
             </Section>
         )
     }

@@ -5,7 +5,11 @@ import {Button,Input} from '../Utils/Utils'
 
 export default class LoginForm extends Component{
     static defaultProps = {
-        onLoginSuccess: () => {}
+        onLoginSuccess: () => {
+            console.log('login submitted')
+            console.log(this.props.history)
+            this.props.history.push('/userPage')
+        }
     }
 
     state = {error:null}
@@ -23,6 +27,7 @@ export default class LoginForm extends Component{
             user_name.value=''
             password.value=''
             TokenService.saveAuthToken(res.authToken)
+            //this.props.history.push('/userpage')
             this.props.onLoginSuccess()
         })
         .catch(res => {

@@ -30,6 +30,7 @@ export default class Header extends Component {
             <h1>
                 <Link to='/'>PlaceHolder Header</Link>
             </h1>
+            <label htmlFor='search_users'>Search Users</label>
             <span className='Header__tagline--wide'>lets learn together!</span>
             {TokenService.hasAuthToken()
                 ? this.renderLogoutLink()

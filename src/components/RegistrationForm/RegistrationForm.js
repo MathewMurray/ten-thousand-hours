@@ -5,7 +5,9 @@ import AuthApiService from '../../services/auth-api-service'
 
 export default class RegistrationForm extends Component{
     static defaultProps = {
-        onRegistrationSuccess: () => {}
+        onRegistrationSuccess: () => {
+
+        }
     }
 
     state = {error:null}
@@ -36,7 +38,7 @@ export default class RegistrationForm extends Component{
         return(
             <form className='RegistrationForm' onSubmit={this.handleSubmit}>
                 <div role='alert'>
-                    {error && <p className='red'>{error}</p>}
+                    {error && <p className='red'>{error.message}</p>}
                 </div>
                 <div className='full_name'>
                     <label htmlFor='RegistrationForm__full_name'>Full Name<Required /></label>
