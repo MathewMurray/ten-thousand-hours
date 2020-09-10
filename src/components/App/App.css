@@ -13,3 +13,7 @@
   .App__main {
     margin-top: 20px;
   }
+  a {
+    color: #444;
+    text-decoration: none;
+  }

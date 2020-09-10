@@ -1,12 +1,15 @@
 import React, {Component} from 'react'
 
-export const nullGoal = {
-    user:{},
-    logs:[],
-}
+// export const nullGoal = {
+//     id:null,
+//     title:null,
+//     target:[],
+//     date_created:[],
+//     user:[],
+// }
 
 const GoalContext = React.createContext({
-    goal:nullGoal,
+    goal:null,
     setError:() => {},
     clearError:() => {},
     setGoal:() => {},
@@ -20,7 +23,7 @@ export default GoalContext
 
 export class GoalProvider extends Component {
     state = {
-        goal: nullGoal,
+        goal: null,
         error: null,
     }
 
@@ -34,7 +37,7 @@ export class GoalProvider extends Component {
     }
 
     setGoal = goal => {
-        this.setState(goal)
+        this.setState({goal})
     }
 
     setLogs = logs => {
@@ -42,7 +45,7 @@ export class GoalProvider extends Component {
     }
 
     clearGoal = () => {
-        this.setGoal(nullGoal)
+        this.setGoal(null)
         this.setLogs([])
     }
 

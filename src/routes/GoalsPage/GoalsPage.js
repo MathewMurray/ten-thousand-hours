@@ -3,6 +3,7 @@ import GoalsApiService from '../../services/goals-api-service'
 import {Hyph,Section} from '../../components/Utils/Utils'
 import LogForm from '../../components/LogForm/LogForm'
 import GoalContext from '../../Context/GoalsContext'
+import './GoalsPage.css'
 
 export default class GoalPage extends Component {
     static defaultProps = {
@@ -14,10 +15,9 @@ export default class GoalPage extends Component {
     componentDidMount() {
         const {goal_id} = this.props.match.params
         this.context.clearError()
-        console.log(goal_id)
-        // GoalsApiService.getGoal(goal_id)
-        //     .then(this.context.setGoal)
-        //     .catch(this.context.setError)
+        GoalsApiService.getGoal(goal_id)
+            .then(this.context.setGoal)
+            .catch(this.context.setError)
         GoalsApiService.getGoalLogs(goal_id)
             .then(this.context.setLogs)
             .catch(this.context.setError)
@@ -32,6 +32,7 @@ export default class GoalPage extends Component {
         return <>
         <h2>{goal.title}</h2>
         <GoalContent goal={goal}/>
+        <p>logs</p>
         <GoalLogs logs={logs} />
         <LogForm />
         </>
@@ -44,7 +45,7 @@ export default class GoalPage extends Component {
             content = (error.error === `Goal doesn't exist`)
                 ? <p className='red'>Goal not found</p>
                 : <p className='red'>There was an error</p>
-        } else if (!goal.id) {
+        } else if (!goal) {
             content = <div className='loading' />
         } else {
             content = this.renderGoal()
@@ -60,7 +61,6 @@ export default class GoalPage extends Component {
 function GoalContent({goal}){
     return (
         <p className='GoalPage__content'>
-            {goal.title}
             {goal.target}
         </p>
     )
@@ -72,7 +72,7 @@ function GoalLogs({logs=[]}){
             {logs.map(log =>
                 <li key={log.id} className='GoalPage__log'>
                     <p className='GoalPage__log-text'>
-                        {log.text}
+                        {log.text} {log.date_created}
                     </p>
                     <p className='GoalPage__log-user'>
                         <Hyph />

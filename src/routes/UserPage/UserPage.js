@@ -3,6 +3,7 @@ import GoalLogContext from '../../Context/GoalsLogContext'
 import GoalsApiService from '../../services/goals-api-service'
 import GoalLogItem from '../../components/GoalLogItem/GoalLogItem'
 import {Section} from '../../components/Utils/Utils'
+import './UserPage.css'
 
 export default class UserPage extends Component {
     static contextType = GoalLogContext
@@ -16,7 +17,6 @@ export default class UserPage extends Component {
 
     renderGoals(){
         const { goalLog } = this.context
-        console.log(goalLog)
         return goalLog.goals.map(goal => 
             <GoalLogItem 
                 key={goal.id}

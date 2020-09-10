@@ -15,7 +15,7 @@ const GoalsApiService = {
             )
     },
     getGoal(goalId){
-        return fetch(`${config.API_ENDPINT}/goals/${goalId}`,{
+        return fetch(`${config.API_ENDPOINT}/goals/${goalId}`,{
             headers:{
                 'Authorization':`bearer ${TokenService.getAuthToken()}`
             },
@@ -25,7 +25,6 @@ const GoalsApiService = {
                 ? res.json().then(e => Promise.reject(e))
                 : res.json()
             )
-            .then(res => console.log(res))
     },
     getGoalLogs(goal_id){
         return fetch(`${config.API_ENDPOINT}/goals/${goal_id}/logs`, {
