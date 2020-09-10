@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
+import {Button} from '../../components/Utils/Utils'
 import './GoalLogItem.css'
 
 export default class GoalLogItem extends Component {
@@ -15,6 +16,7 @@ export default class GoalLogItem extends Component {
                         <p className='GoalLogItem__description'>{(goal.target)} hours</p>
                     </div>
                 </div>
+                <Button type='Delete'>Delete</Button>
             </Link>
         )
     }

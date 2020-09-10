@@ -11,7 +11,8 @@ export default class Header extends Component {
         return (
             <div className=''>
                 <Link to='/userPage'>Goals \</Link>
-                <Link onClick={this.handleLogOutClick} to='/'> Logout</Link>
+                <Link to='/newGoal'> New Goal \</Link>
+                <Link onClick={this.handleLogOutClick} to='/'> Logout </Link>
             </div>
         )
     }
@@ -20,7 +21,7 @@ export default class Header extends Component {
         return(
             <div className='Header--not-logged-in'>
                 <Link to='/login'>Log in \</Link>
-                <Link to='/register'> Register</Link>
+                <Link to='/register'> Register </Link>
             </div>
         )
     }

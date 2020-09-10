@@ -9,6 +9,7 @@ import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 import GoalsPage from '../../routes/GoalsPage/GoalsPage'
 import HomePage from '../../routes/HomePage/HomePage'
 import UserPage from '../../routes/UserPage/UserPage'
+import NewGoalForm from '../../components/NewGoalForm/NewGoalForm'
 import './App.css'
 
 class App extends Component {
@@ -35,6 +36,10 @@ class App extends Component {
             <PrivateRoute
               path={'/goals/:goal_id/logs'}
               component={GoalsPage}
+            />
+            <PrivateRoute
+              path={'/newGoal'}
+              component={NewGoalForm}
             />
             <PublicRoute
               path={'/login'}
