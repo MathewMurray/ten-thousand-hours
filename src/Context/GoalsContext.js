@@ -7,13 +7,13 @@ export const nullGoal = {
 
 const GoalContext = React.createContext({
     goal:nullGoal,
-    logs: null,
     setError:() => {},
     clearError:() => {},
     setGoal:() => {},
     clearGoal:() => {},
     setLogs:() => {},
     addLog:() => {},
+    setUser:() => {},
 })
 
 export default GoalContext
@@ -34,7 +34,7 @@ export class GoalProvider extends Component {
     }
 
     setGoal = goal => {
-        this.setState({goal})
+        this.setState(goal)
     }
 
     setLogs = logs => {
@@ -51,6 +51,13 @@ export class GoalProvider extends Component {
             ...this.state.logs,
             log
         ])
+    }
+
+    setUser = user => {
+        this.goal({
+            ...this.state.goal,
+            user
+        })
     }
 
     render(){

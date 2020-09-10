@@ -1,4 +1,4 @@
-import React, {Component} from 'react
+import React, {Component} from 'react'
 import GoalsApiService from '../../services/goals-api-service'
 import {Hyph,Section} from '../../components/Utils/Utils'
 import LogForm from '../../components/LogForm/LogForm'
@@ -6,23 +6,24 @@ import GoalContext from '../../Context/GoalsContext'
 
 export default class GoalPage extends Component {
     static defaultProps = {
-        match: { params: {} },
+        match: { params:{} },
     }
 
     static contextType = GoalContext
 
     componentDidMount() {
-        const {goalId} = this.props.match.params
+        const {goal_id} = this.props.match.params
         this.context.clearError()
-        GoalsApiService.getGoal(goalId)
-            .then(this.context.setGoal)
-            .catch(this.context.setError)
-        GoalsApiService.getGoalLogs(goalId)
+        console.log(goal_id)
+        // GoalsApiService.getGoal(goal_id)
+        //     .then(this.context.setGoal)
+        //     .catch(this.context.setError)
+        GoalsApiService.getGoalLogs(goal_id)
             .then(this.context.setLogs)
             .catch(this.context.setError)
     }
 
-    componentWillMount() {
+    componentWillUnmount() {
         this.context.clearGoal()
     }
 
@@ -45,7 +46,10 @@ export default class GoalPage extends Component {
                 : <p className='red'>There was an error</p>
         } else if (!goal.id) {
             content = <div className='loading' />
-        } else (
+        } else {
+            content = this.renderGoal()
+        }
+        return (
             <Section className='GoalPage'>
                 {content}
             </Section>
@@ -56,7 +60,8 @@ export default class GoalPage extends Component {
 function GoalContent({goal}){
     return (
         <p className='GoalPage__content'>
-            {goal.content}
+            {goal.title}
+            {goal.target}
         </p>
     )
 }
@@ -71,7 +76,7 @@ function GoalLogs({logs=[]}){
                     </p>
                     <p className='GoalPage__log-user'>
                         <Hyph />
-                        {log.user.full_name}
+                        {log.user_hours}
                     </p>
                 </li>
             )}

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import TokenService from '../../services/token-service'
-
+import './Header.css'
 export default class Header extends Component {
     handleLogOutClick = () => {
         TokenService.clearAuthToken()
@@ -10,7 +10,8 @@ export default class Header extends Component {
     renderLogoutLink() {
         return (
             <div className=''>
-                <Link onClick={this.handleLogOutClick} to='/'>Logout</Link>
+                <Link to='/userPage'>Goals \</Link>
+                <Link onClick={this.handleLogOutClick} to='/'> Logout</Link>
             </div>
         )
     }
@@ -18,8 +19,8 @@ export default class Header extends Component {
     renderLoginLink(){
         return(
             <div className='Header--not-logged-in'>
-                <Link to='/login'>Log in</Link>
-                <Link to='/register'>Register</Link>
+                <Link to='/login'>Log in \</Link>
+                <Link to='/register'> Register</Link>
             </div>
         )
     }
@@ -28,16 +29,15 @@ export default class Header extends Component {
         return <>
         <nav className='Header'>
             <h1>
-                <Link to='/'>PlaceHolder Header</Link>
+                <Link to='/'>10,000 hours</Link>
             </h1>
-            <label htmlFor='search_users'>Search Users</label>
-            <span className='Header__tagline--wide'>lets learn together!</span>
+            <span className='Header__tagline--wide'>lets learn together</span>
             {TokenService.hasAuthToken()
                 ? this.renderLogoutLink()
                 :this.renderLoginLink()}
         </nav>
 
-        <span className='Header__tagline--narrow'>Lets learn together!</span>
+        <span className='Header__tagline--narrow'>Lets learn together</span>
         </>
     }
 }

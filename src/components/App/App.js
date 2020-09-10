@@ -6,8 +6,10 @@ import PublicRoute from '../Utils/PublicRoute'
 import LoginPage from '../../routes/loginPage/LoginPage'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
-import HomePage from '../HomePage/HomePage'
-import UserPage from '../UserPage/UserPage'
+import GoalsPage from '../../routes/GoalsPage/GoalsPage'
+import HomePage from '../../routes/HomePage/HomePage'
+import UserPage from '../../routes/UserPage/UserPage'
+import './App.css'
 
 class App extends Component {
   state = { hasError: false }
@@ -29,6 +31,10 @@ class App extends Component {
             <PrivateRoute
               path={'/userPage'}
               component={UserPage}
+            />
+            <PrivateRoute
+              path={'/goals/:goal_id/logs'}
+              component={GoalsPage}
             />
             <PublicRoute
               path={'/login'}

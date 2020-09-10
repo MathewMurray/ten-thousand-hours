@@ -1,1 +1,38 @@
-//pulls all user goals and logs from db
+import React, { Component } from 'react'
+import GoalLogContext from '../../Context/GoalsLogContext'
+import GoalsApiService from '../../services/goals-api-service'
+import GoalLogItem from '../../components/GoalLogItem/GoalLogItem'
+import {Section} from '../../components/Utils/Utils'
+
+export default class UserPage extends Component {
+    static contextType = GoalLogContext
+
+    componentDidMount() {
+        this.context.clearError()
+        GoalsApiService.getGoals()
+            .then(this.context.setGoalLog)
+            .catch(this.context.setError)
+    }
+
+    renderGoals(){
+        const { goalLog } = this.context
+        console.log(goalLog)
+        return goalLog.goals.map(goal => 
+            <GoalLogItem 
+                key={goal.id}
+                goal={goal}
+            />
+        )
+    }
+
+    render() {
+        const { error } = this.context
+        return(
+            <Section list className='UserPage'>
+                {error 
+                    ? <p className='red'>there was an error, try again.</p>
+                    : this.renderGoals()}
+            </Section>
+        )
+    }
+}

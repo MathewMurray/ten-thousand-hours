@@ -4,8 +4,8 @@ import TokenService from './token-service'
 const GoalsApiService = {
     getGoals(){
         return fetch(`${config.API_ENDPOINT}/goals`, {
-            headers: {
-
+            headers:{
+                'Authorization':`bearer ${TokenService.getAuthToken()}`
             },
         })
             .then(res =>
@@ -25,9 +25,10 @@ const GoalsApiService = {
                 ? res.json().then(e => Promise.reject(e))
                 : res.json()
             )
+            .then(res => console.log(res))
     },
-    getGoalLogs(goalId){
-        return fetch(`${config.API_ENDPOINT}/goals/${goalId}/logs`, {
+    getGoalLogs(goal_id){
+        return fetch(`${config.API_ENDPOINT}/goals/${goal_id}/logs`, {
             headers: {
                 'Authorization':`bearer ${TokenService.getAuthToken()}`
             },
@@ -53,7 +54,7 @@ const GoalsApiService = {
         })
             .then(res => 
                 (!res.ok)
-                ? res.json().then(e => Promise.reject(E))
+                ? res.json().then(e => Promise.reject(e))
                 : res.json()
                 )
     }

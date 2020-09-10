@@ -1,7 +1,10 @@
 import React, {Component} from 'react'
 
 const GoalLogContext = React.createContext({
-    goalLog:[],
+    goalLog:{
+        goals:[],
+        user:{},
+    },
     error: null,
     setError: () => {},
     clearError: () => {},
@@ -11,7 +14,10 @@ export default GoalLogContext
 
 export class GoalLogProvider extends Component {
     state = { 
-        goalLog: [],
+        goalLog: {
+            goals:[],
+            user:{},
+        },
         error: null,
     }
 
