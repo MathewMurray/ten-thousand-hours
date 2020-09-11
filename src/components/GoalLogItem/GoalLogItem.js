@@ -11,7 +11,6 @@ export default class GoalLogItem extends Component {
             <Link to={`/Goals/${goal.id}/logs`} className='GoalLogItem'>
                 <div className='GoalLogItem__details'>
                     <div className='GoalLogItem__text'>
-                    <h3 className='GoalLogItem__Heading'>{goal.id}</h3>
                         <h2 className='GoalLogItem__Heading'>{goal.title}</h2>
                         <p className='GoalLogItem__description'>{(goal.target)} hours</p>
                     </div>
