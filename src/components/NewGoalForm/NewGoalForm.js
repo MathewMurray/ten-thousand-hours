@@ -13,7 +13,7 @@ export default class NewGoalForm extends Component {
 
         GoalApiService.postGoal(title.value,Number(target.value))
             .then(() => {
-                text.value = ''
+                title.value = ''
             })
             .catch(this.context.setError)
     }
