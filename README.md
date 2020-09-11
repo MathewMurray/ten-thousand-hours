@@ -17,17 +17,17 @@ When a user is logged in, this page will change the links on the header to displ
 as well as allow the user to log out.
   
 User Page - 
-<userpage screenshot>
+![Alt text](/screenshots/userpage.png?raw=true "Optional Title")
 This displays the user's goals as active links that will go to an indiviual goal page where logs are found for that goal.
 This also contains links to the home page, User page(goals), the add goals page and a log out page. 
   
 Add Goals - 
-<addGoals screenshot>
+![Alt text](/screenshots/addgoalpage.png?raw=true "Optional Title")
 Here a user can add a new goal. The user is asked to input a title for the goal and a target for how many hours they want
 to spend on this goal(in numarical value).
   
 Goals page - 
-<goals page screenshot>
+![Alt text](/screenshots/goalpage.png?raw=true "Optional Title")
 This displays the individual user goal the user selected from their user page. Here is shows the goal title, target hours 
 and any logs the user has made. It also allows the user to add a new log via the form at the bottom of the screen. To add
 a new log, the user would input what they did and for how long. When submitted, the log will show under the goal target 
