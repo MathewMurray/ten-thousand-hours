@@ -9,6 +9,7 @@ export default class NewGoalForm extends Component {
 
     handleSubmit = ev => {
         ev.preventDefault()
+        const{goal} = this.context
         const {title,target} = ev.target
 
         GoalApiService.postGoal(title.value,Number(target.value))
@@ -26,8 +27,8 @@ export default class NewGoalForm extends Component {
                     <Textarea
                         required
                         aria-label='What goal do you have?.'
-                        name='text'
-                        id='text'  
+                        name='title'
+                        id='title'  
                         col='30'
                         rows='3'
                         placeholder='whats your goal?..'>
