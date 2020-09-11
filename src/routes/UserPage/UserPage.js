@@ -33,6 +33,7 @@ export default class UserPage extends Component {
                 <p>This page will display you individual goals. If you notice, there is no delete button.
                 why? Because often times we forget out goals, we lose track of what we want. This application
                 wont let you forget. Sure, goals change, but they always start from something.</p>
+                <br/>
             <Section list className='UserPage'>
                 {error 
                     ? <p className='red'>there was an error, try again.</p>

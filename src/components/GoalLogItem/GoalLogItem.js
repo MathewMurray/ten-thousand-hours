@@ -16,7 +16,6 @@ export default class GoalLogItem extends Component {
                         <p className='GoalLogItem__description'>{(goal.target)} hours</p>
                     </div>
                 </div>
-                <Button type='Delete'>Delete</Button>
             </Link>
         )
     }
