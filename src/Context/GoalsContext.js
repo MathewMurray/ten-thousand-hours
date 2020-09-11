@@ -1,13 +1,5 @@
 import React, {Component} from 'react'
 
-// export const nullGoal = {
-//     id:null,
-//     title:null,
-//     target:[],
-//     date_created:[],
-//     user:[],
-// }
-
 const GoalContext = React.createContext({
     goal:null,
     setError:() => {},

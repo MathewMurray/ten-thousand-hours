@@ -19,12 +19,3 @@ export default class GoalLogItem extends Component {
         )
     }
 }
-
-// function truncate (text) {
-//     const words = text.split(' ')
-
-//     if(words.length > 10){
-//         return words.slice(0,10).join(' ')+' ...'
-//     }
-//     return text
-// }

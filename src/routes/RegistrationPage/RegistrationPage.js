@@ -3,11 +3,6 @@ import RegistrationForm from '../../components/RegistrationForm/RegistrationForm
 import {Section} from '../../components/Utils/Utils'
 
 export default class RegistrationPage extends Component {
-    // static defaultProps = {
-    //     history: {
-    //         push: () => {},
-    //     },
-    // }
 
     handleRegistrationSuccess = user => {
         const {history} = this.props
