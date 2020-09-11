@@ -33,4 +33,6 @@ and any logs the user has made. It also allows the user to add a new log via the
 a new log, the user would input what they did and for how long. When submitted, the log will show under the goal target 
 in a list along with any other logs for that goal. The log will display the activity, posted date, and the recorded hours.
   
-<tech stack here>
+Tech Stack:
+
+This application, along with its back end support was built using React, express and Postgresql.
