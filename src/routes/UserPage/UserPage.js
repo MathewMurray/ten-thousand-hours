@@ -35,6 +35,7 @@ export default class UserPage extends Component {
                     ? <p className='red'>there was an error, try again.</p>
                     : this.renderGoals()}
             </Section>
+            </div>
         )
     }
 }
