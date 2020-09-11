@@ -40,7 +40,7 @@ export default class NewGoalForm extends Component {
                         aria-label='Log your time..'
                         name='target'
                         id='target'
-                        placeholder='how many hours will it take?..'>
+                        placeholder='1,2,4000...'>
                     </Textarea>
                 </div>
                 <Button type='submit'>
