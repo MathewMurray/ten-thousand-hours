@@ -9,9 +9,10 @@ export default class NewGoalForm extends Component {
 
     handleSubmit = ev => {
         ev.preventDefault()
-        const {title,target,user_id} = ev.target
+        const{goal} = this.context
+        const {text,user_hours} = ev.target
 
-        GoalApiService.postGoal(title.value,Number(target.value))
+        GoalApiService.post(goal.id,text.value,Number(user_hours.value))
             .then(this.context.addLog)
             .then(() => {
                 text.value = ''
