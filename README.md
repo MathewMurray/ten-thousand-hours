@@ -1,68 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome! And I hope the day finds you well. This is the 10,000 hours application.
 
-## Available Scripts
+What is 10,000 hour?
 
-In the project directory, you can run:
+This application was built on the idea that spending a signifigant amount of time on a skill/concept will lead to mastery of that subject. 
+The application works like a personal blog that each individual user can set goals with a target amount of hours, then post logs that are
+saved to those goals for the user to track their progress towards their target. 
 
-### `yarn start`
+check out the live version here:
+https://ten-thousand-hours-n1wvig9t4.vercel.app/
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Home page -
+<homepage screenshot>
+this component is the first one you will see when you load the page. it contains links to login and register with the database.
+When a user is logged in, this page will change the links on the header to display links to the Userpage, add goals as
+as well as allow the user to log out.
+  
+User Page - 
+<userpage screenshot>
+This displays the user's goals as active links that will go to an indiviual goal page where logs are found for that goal.
+This also contains links to the home page, User page(goals), the add goals page and a log out page. 
+  
+Add Goals - 
+<addGoals screenshot>
+Here a user can add a new goal. The user is asked to input a title for the goal and a target for how many hours they want
+to spend on this goal(in numarical value).
+  
+Goals page - 
+<goals page screenshot>
+This displays the individual user goal the user selected from their user page. Here is shows the goal title, target hours 
+and any logs the user has made. It also allows the user to add a new log via the form at the bottom of the screen. To add
+a new log, the user would input what they did and for how long. When submitted, the log will show under the goal target 
+in a list along with any other logs for that goal. The log will display the activity, posted date, and the recorded hours.
+  
+<tech stack here>
