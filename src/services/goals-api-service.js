@@ -56,6 +56,25 @@ const GoalsApiService = {
                 ? res.json().then(e => Promise.reject(e))
                 : res.json()
                 )
+    },
+    postGoal(title,target,user_id){
+        return fetch(`${config.API_ENDPOINT}/goals`, {
+            method: 'POST',
+            headers:{
+                'content-type':'application/json',
+                'Authorization':`bearer ${TokenService.getAuthToken()}`
+            },
+            body: JSON.stringify({
+                title,
+                target,
+                user_id,
+            })
+        })
+            .then(res => 
+                (!res.ok)
+                ? res.json().then(e => Promise.reject(e))
+                : res.json()
+                )
     }
 }
 
