@@ -7,7 +7,7 @@ The application works like a personal blog that each individual user can set goa
 saved to those goals for the user to track their progress towards their target. 
 
 check out the live version here:
-https://ten-thousand-hours-n1wvig9t4.vercel.app/
+https://ten-thousand-hours.vercel.app/
 
 
 ##Home page -
