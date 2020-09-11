@@ -67,7 +67,6 @@ const GoalsApiService = {
             body: JSON.stringify({
                 title,
                 target,
-                user_id,
             })
         })
             .then(res => 
