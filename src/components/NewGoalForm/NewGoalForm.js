@@ -13,6 +13,7 @@ export default class NewGoalForm extends Component {
         const {title,target} = ev.target
 
         GoalApiService.postGoal(title.value,Number(target.value))
+            .then(this.context.addGoal)
             .then(() => {
                 title.value = ''
             })
