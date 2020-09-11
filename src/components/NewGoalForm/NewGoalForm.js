@@ -9,11 +9,9 @@ export default class NewGoalForm extends Component {
 
     handleSubmit = ev => {
         ev.preventDefault()
-        const{goal} = this.context
-        const {text,user_hours} = ev.target
+        const {title,target} = ev.target
 
-        GoalApiService.post(goal.id,text.value,Number(user_hours.value))
-            .then(this.context.addLog)
+        GoalApiService.postGoal(title.value,Number(target.value))
             .then(() => {
                 text.value = ''
             })
@@ -22,26 +20,27 @@ export default class NewGoalForm extends Component {
 
     render(){
         return (
-            <form className='LogForm' onSubmit={this.handleSubmit}>
-                <div className='text'>
+            <form className='NewGoalFOrm' onSubmit={this.handleSubmit}>
+                <div className='title'>
+                    <label htmlFor='title'>what are you learning?</label>
                     <Textarea
                         required
-                        aria-label='Type a log...'
+                        aria-label='What goal do you have?.'
                         name='text'
                         id='text'  
                         col='30'
                         rows='3'
-                        placeholder='Type a log..'>
+                        placeholder='whats your goal?..'>
                     </Textarea>
                 </div>
-                <div className='user_hours'>
-                    <label htmlFor='user_hours'>How many hours?</label>
+                <div className='target'>
+                    <label htmlFor='target'>How many hours?</label>
                     <Textarea
                         required
                         aria-label='Log your time..'
-                        name='user_hours'
-                        id='user_hours'
-                        placeholder='1,2,3...'>
+                        name='target'
+                        id='target'
+                        placeholder='how many hours will it take?..'>
                     </Textarea>
                 </div>
                 <Button type='submit'>

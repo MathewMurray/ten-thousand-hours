@@ -57,7 +57,7 @@ const GoalsApiService = {
                 : res.json()
                 )
     },
-    postGoal(title,target,user_id){
+    postGoal(title,target){
         return fetch(`${config.API_ENDPOINT}/goals`, {
             method: 'POST',
             headers:{
