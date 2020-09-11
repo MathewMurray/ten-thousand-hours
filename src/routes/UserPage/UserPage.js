@@ -28,6 +28,8 @@ export default class UserPage extends Component {
     render() {
         const { error } = this.context
         return(
+            <div className='UserPage'>
+                <h1> Goals </h1>
             <Section list className='UserPage'>
                 {error 
                     ? <p className='red'>there was an error, try again.</p>
