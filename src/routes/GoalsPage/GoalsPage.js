@@ -61,7 +61,7 @@ export default class GoalPage extends Component {
 function GoalContent({goal}){
     return (
         <p className='GoalPage__content'>
-            {goal.target - log.user_hours}
+            {goal.target} hours
         </p>
     )
 }
