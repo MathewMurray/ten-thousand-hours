@@ -11,7 +11,7 @@ https://ten-thousand-hours-n1wvig9t4.vercel.app/
 
 
 Home page -
-<homepage screenshot>
+![Alt text](/screenshots/homepage.png?raw=true "Optional Title")
 this component is the first one you will see when you load the page. it contains links to login and register with the database.
 When a user is logged in, this page will change the links on the header to display links to the Userpage, add goals as
 as well as allow the user to log out.
