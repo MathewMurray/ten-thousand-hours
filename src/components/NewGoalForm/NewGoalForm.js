@@ -8,12 +8,13 @@ export default class NewGoalForm extends Component {
     static contextType = GoalContext
 
     handleSubmit = ev => {
+        const {history} = this.props
         ev.preventDefault()
         const {title,target} = ev.target
 
         GoalApiService.postGoal(title.value,Number(target.value))
             .then(() => {
-                title.value = ''
+                history.push('/userpage')
             })
             .catch(this.context.setError)
     }
