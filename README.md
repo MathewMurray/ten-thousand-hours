@@ -11,6 +11,7 @@ check out the live version here:
 https://ten-thousand-hours.vercel.app/
 
 demo user account has been set up. simply log in with the following:
+
 **username: Demo**
 **password: Demo1234!**
 
