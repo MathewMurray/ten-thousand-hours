@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogForm component renders the log form 1`] = `
+<form
+  className="LogForm"
+  onSubmit={[Function]}
+>
+  <div
+    className="text"
+  >
+    <Textarea
+      aria-label="Type a log..."
+      col="30"
+      id="text"
+      name="text"
+      placeholder="Type a log.."
+      required={true}
+      rows="3"
+    />
+  </div>
+  <div
+    className="user_hours"
+  >
+    <label
+      htmlFor="user_hours"
+    >
+      How many hours?
+    </label>
+    <Textarea
+      aria-label="Log your time.."
+      id="user_hours"
+      name="user_hours"
+      placeholder="1,2,3..."
+      required={true}
+    />
+  </div>
+  <Button
+    type="submit"
+  >
+    Post Log
+  </Button>
+</form>
+`;

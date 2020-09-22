@@ -1,0 +1,23 @@
+.full_name, .user_name, .password {
+    text-align: center;
+    
+}
+#RegistrationForm__full_name{
+    padding: 1px .5rem 4px 4rem;
+    margin: 3px .5rem;
+    border: 1px solid #888383;
+}
+
+#RegistrationForm__user_name{
+    padding: 1px .5rem 4px 4rem;
+    margin: 4px 1rem;
+    border: 1px solid #888383;
+}
+#registrationForm__password{
+    padding: 1px .5rem 4px 4rem;
+    margin: 4px 1rem;
+    border: 1px solid #888383;
+}
+p.red{
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+form {
+    border: 3px solid slategray;
+}
+.LoginForm {
+    padding: 16px 15px;
+}
+.user_name, .password{
+    text-align: center;
+}
+#LoginForm__user_name{
+    width:40%;
+    margin: 8px .45rem;
+    border: 1px solid #888383;
+    box-sizing: border-box;
+}
+#LoginForm__password{
+    width:40%;
+    margin: 8px .7rem;
+    border: 1px solid #888383;
+    box-sizing: border-box;
+}
+
+button.button {
+    inline-size: -webkit-fill-available;
+    text-align: center;
+}
+

@@ -41,7 +41,7 @@
     margin: 0;
   }
   
-  .GoalLogItem__details .ThingStarRating {
+  .GoalLogItem__details {
     padding: 5px 0;
     text-align: center;
     opacity: 0.85;
