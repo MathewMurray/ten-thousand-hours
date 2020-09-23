@@ -10,17 +10,19 @@
   }
   
   .Header a {
-    color: #444;
+    color: #e0e1dd;
     text-decoration: none;
   }
   
   .Header__tagline--wide {
-    opacity: 0.7;
+    opacity: 0.85;
+    color: #e0e1dd;
     margin-left: 10px;
   }
   
   .Header__tagline--narrow {
-    opacity: 0.7;
+    opacity: 0.85;
+    color: #e0e1dd;
     display: block;
     text-align: center;
     display: none;

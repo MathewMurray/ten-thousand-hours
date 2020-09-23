@@ -10,7 +10,7 @@ describe(`GoalLogItem component`, () => {
         title: 'test goal',
     }
     it('renders the Goal logs for goals',() => {
-        const wrapper = shallow(<GoalLogItem />)
+        const wrapper = shallow(<GoalLogItem goal />)
         expect(toJson(wrapper)).toMatchSnapshot()
     })
 })

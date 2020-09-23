@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoalLogItem component renders the Goal logs for goals 1`] = `
+<Link
+  className="GoalLogItem"
+  to="/Goals/undefined/logs"
+>
+  <div
+    className="GoalLogItem__details"
+  >
+    <div
+      className="GoalLogItem__text"
+    >
+      <h2
+        className="GoalLogItem__Heading"
+      />
+      <p
+        className="GoalLogItem__description"
+      >
+         hours
+      </p>
+    </div>
+  </div>
+</Link>
+`;

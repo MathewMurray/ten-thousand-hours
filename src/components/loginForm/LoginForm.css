@@ -5,6 +5,7 @@ form {
     padding: 16px 15px;
 }
 .user_name, .password{
+    color:#e0e1dd ;
     text-align: center;
 }
 #LoginForm__user_name{

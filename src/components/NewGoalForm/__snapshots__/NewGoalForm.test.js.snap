@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewGoalForm component renders New Goal Form 1`] = `
+<form
+  className="NewGoalFOrm"
+  onSubmit={[Function]}
+>
+  <div
+    className="title"
+  >
+    <label
+      htmlFor="title"
+    >
+      what are you learning?
+    </label>
+    <Textarea
+      aria-label="What goal do you have?."
+      col="30"
+      id="title"
+      name="title"
+      placeholder="whats your goal?.."
+      required={true}
+      rows="3"
+    />
+  </div>
+  <div
+    className="target"
+  >
+    <label
+      htmlFor="target"
+    >
+      How many hours?
+    </label>
+    <Textarea
+      aria-label="Log your time.."
+      id="target"
+      name="target"
+      placeholder="1,2,4000..."
+      required={true}
+    />
+  </div>
+  <Button
+    type="submit"
+  >
+    Post Goal
+  </Button>
+</form>
+`;

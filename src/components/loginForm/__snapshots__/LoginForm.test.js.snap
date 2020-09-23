@@ -14,7 +14,7 @@ exports[`Login form component renders the Login form 1`] = `
     <label
       htmlFor="LoginForm__user_name"
     >
-      User name
+      Username: 
     </label>
     <Input
       id="LoginForm__user_name"
@@ -28,7 +28,7 @@ exports[`Login form component renders the Login form 1`] = `
     <label
       htmlFor="LoginForm__password"
     >
-      Password
+      Password: 
     </label>
     <Input
       id="LoginForm__password"
