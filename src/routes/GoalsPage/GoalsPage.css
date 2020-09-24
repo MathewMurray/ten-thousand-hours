@@ -43,10 +43,11 @@
     padding: 8px;
     margin-bottom: 4px;
     border-radius: 4px;
+    color: black;
   }
   
   .GoalPage__log-user {
-    color: #666;
+    color: #e0e1dd;
     margin: 8px 10px 0;
     font-size: 10pt;
     font-weight: bold;

@@ -1,3 +1,9 @@
+.RegistrationForm{
+    padding: 16px 15px;
+
+}
+
+
 .full_name{
     color:#e0e1dd ;
     text-align: center;
@@ -16,7 +22,7 @@
 }
 #registrationForm__password{
     padding: 1px .5rem 4px 4rem;
-    margin: 4px 1rem;
+    margin: 4px 1rem 10px;
     border: 1px solid #888383;
 }
 p.red{
